@@ -13,7 +13,6 @@ fn main() {
     let c = {
         let a = 98 + b;
 
-        println!("{}",a);
 
         fn t(letra: &str){
             println!("{}", letra);
@@ -25,7 +24,20 @@ fn main() {
 
     };
 
+
+    println!("{}", c);
+
+    let n: [u32; 5] = r();
+
+    if b > 20 {
+        println!("B es mayor que veinte");
+    }else{
+        println!("B no es mayor que veinte");
+    }
+ 
     let d = retornar(b);
+
+    let data: u32 = if b > 20 {10} else {b};
 
     println!("{}", d);
 
@@ -35,4 +47,10 @@ fn retornar(n: i32) -> i32 {
     let a: i32 = 15 - n;
 
     a 
+} 
+
+fn r () -> [u32; 5] {
+    let c: [u32; 5] = [1, 2, 3, 4, 5];
+
+    c
 }
